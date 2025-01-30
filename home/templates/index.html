@@ -1,0 +1,952 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>QuantEdge</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href=" {% static 'assets/img/new logo.png' %} " rel="icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href=" {% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/aos/aos.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/glightbox/css/glightbox.min.css' %} " rel="stylesheet">
+  <link href=" {% static 'assets/vendor/swiper/swiper-bundle.min.css' %} " rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href=" {% static 'assets/css/main.css' %} " rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+
+  <img src=" {% static 'assets/img/new logo.png' %} " rel="icon">
+
+        <h1 class="sitename">QuantEdge</h1><span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href=" " class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+          <li><a href="{% url 'strategybt' %}">Strategy</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      
+      <a class="btn-getstarted" href="{% url 'register' %}">
+        Get Started
+      </a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+      <!-- Hero Section - Home Page -->
+      <section id="hero" class="hero">
+        <img src="{% static 'assets/img/betterhero.jpg' %}" alt="" data-aos="fade-in" >
+  
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10">
+              <h2 data-aos="fade-up" data-aos-delay="100" style="font-size: 70;">"Invest with Ease, Grow with Confidence"</h2>
+              <p data-aos="fade-up" data-aos-delay="200">Smart tools, Simple strategies.</p>
+              <p>We aim to simplify investing, making it effortless and accessible for everyone, whether you're a beginner or an experienced trader.</p>
+            </div>
+            <div class="col-lg-5">
+              <form action="/register" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
+                <input type="text" class="form-control" placeholder="Enter email address">
+                <input type="submit" class="btn btn-primary" value="Sign up">
+              </form>
+            </div>
+          </div>
+        </div>
+  
+      </section><!-- End Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src=" {% static 'assets/img/clients/client-1.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src=" {% static 'assets/img/clients/client-2.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src=" {% static 'assets/img/clients/client-3.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src=" {% static 'assets/img/clients/client-4.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src=" {% static 'assets/img/clients/client-5.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src=" {% static 'assets/img/clients/client-6.png' %} " class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-5 content">
+            <h3>About Us</h3>
+            <h2>Unlock your investment potential with our innovative tools.</h2>
+            <p>Step confidently into the world of capital trading with powerful, AI-driven solutions that simplify and enhance every move you make.</p>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                  <i class="bi bi-buildings"></i>
+                  <h3>Risk Control Center</h3>
+                  <h6 style="font-style: italic;">Confidence Through Control.</h6> 
+                  <p>Customize risk levels, track market exposure, and protect your investments with real-time, adaptive risk management tools.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-clipboard-pulse"></i>
+                  <h3>Market Insight Scanner</h3>
+                  <h6 style="font-style: italic;">Stay in Sync with Market Trends.</h6>
+                  <p>  Gain real-time insights into market sentiment and align your trades with current trends for a strategic edge.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-command"></i>
+                  <h3>Investment Balancer </h3>
+                  <h6 style="font-style: italic;">Enhance Your Portfolio's Potential.</h6> 
+                  <p>A tool that fine-tunes asset allocation, balancing risk and reward to support your growth and financial objectives.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <h3>Efficient Order Execution</h3>
+                  <h6 style="font-style: italic;">Secure the Best Price, Every Time.</h6> 
+                  <p>Automatically direct trades to achieve the best available prices, ensuring swift and effective execution for optimal results.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section dark-background">
+
+      <img src=" {% static 'assets/img/stats.jpg' %} " alt="" data-aos="fade-in">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="405" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Signups</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Algos</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="175" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Live Trades Daily</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Broker APIs Connected</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Automated Trade Execution</a></h4>
+                <p class="description">Precision Trading, Hands-Free.</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+              <div>
+                <h4 class="title"><a href=" services-details.html " class="stretched-link">Strategy Builder</a></h4>
+                <p class="description">Custom Strategies, No Coding Required.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Backtesting Suite</a></h4>
+                <p class="description">Test Your Strategies with Real Market Data.
+                </p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link"> Risk Management Tools</a></h4>
+                <p class="description">Protect Your Investments.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Social Trading Platform</a></h4>
+                <p class="description">Trade Like the Experts.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Real-Time Market Insights</a></h4>
+                <p class="description">Stay Informed and Ahead.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Explore the Trading Spectrum</h2>
+        <p>Beginners discover support, while experts uncover innovation—both available on our platform.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>Begin with signing up</h3>
+            <p>
+              Start your trading journey by signing up and loging into your trading account on our trading platform
+            </p>
+            <a href="{% url 'register' %}" class="btn btn-get-started">Get Started</a>
+          </div>
+          <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <div class="image-stack">
+              <img src=" {% static 'assets/img/signup.jpg' %} " alt="" class="stack-front">
+              <img src=" {% static 'assets/img/ease (2).jpg' %} " alt="" class="stack-back">
+            </div>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+          <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+            <img src=" {% static 'assets/img/strategy.jpg' %} " class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+            <h3>Pick Your Strategy</h3>
+            <p>Protect yourself from the ups and downs of the market by including your preferred level of risk into the trading algorithm.</p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>Risk-Aware Trading
+            </h3>
+            <p>
+              You can decide how to trade on our platform. Pick expert trading plans made by professionals, or make your own strategy.
+            </p>
+          </div>
+          <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <div class="image-stack">
+              <img src=" {% static 'assets/img/risk.jpg' %} " alt="" class="stack-front">
+              <img src=" {% static 'assets/img/risk (3).jpg' %} " alt="" class="stack-back">
+            </div>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+          <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+            <img src=" {% static 'assets/img/6210016.jpg' %} " class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+            <h3>Trade with Ease</h3>
+            <p>Once you've adjusted everything the way you prefer, you can start your trading journey using our platform.</p>
+          </div>
+        </div><!-- Features Item -->
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Pricing That Adapts to Your Success</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Free Plan</h3>
+              <div class="icon">
+                <i class="bi bi-box"></i>
+              </div>
+              <h4><sup>₹</sup>0<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>50 Backtest Credit Points</span></li>
+                <li><i class="bi bi-check"></i> <span>5 Strategy Creation</span></li>
+                <li><i class="bi bi-check"></i> <span>No Basic + HNI & Retail Strategy Template Access</span></li>
+                <li><i class="bi bi-check"></i> <span>Reporting Console</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>No Strategy Deployment (Live & Forward)</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>No Portfolio Backtesting</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item featured">
+              <h3>Unlimited Plan Plan</h3>
+              <div class="icon">
+                <i class="bi bi-rocket"></i>
+              </div>
+
+              <h4><sup>₹</sup>1499<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>1500 Backtest Credit Points</span></li>
+                <li><i class="bi bi-check"></i> <span>50 Strategy Creations</span></li>
+                <li><i class="bi bi-check"></i> <span>Basic + HNI & Retail Strategy Template Access</span></li>
+                <li><i class="bi bi-check"></i> <span>Reporting Console</span></li>
+                <li><i class="bi bi-check"></i> <span>20 Strategy Deployment (Live & Forward)</span></li>
+                <li><i class="bi bi-check"></i> <span>10 Strategy Portfolio Backtesting</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Limited Plan</h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+              <h4><sup>₹</sup>999<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>500 Backtest Credit Points</span></li>
+                <li><i class="bi bi-check"></i> <span>25 Strategy Creations</span></li>
+                <li><i class="bi bi-check"></i> <span>Basic + HNI & Retail Strategy Template Access</span></li>
+                <li><i class="bi bi-check"></i> <span>Reporting Console</span></li>
+                <li><i class="bi bi-check"></i> <span>5 Strategy Deployment (Live & Forward)</span></li>
+                <li><i class="bi bi-check"></i> <span>2 Strategy Portfolio Backtesting</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Pricing Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="content px-xl-5">
+              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+              <p>If you have any additional questions or need further assistance, our support team is here to help. 
+                We're committed to providing you with the resources and guidance you need to navigate your trading journey successfully. 
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3><span class="num">1.</span> <span>Do I need to be a coding expert to use your tools?
+                  </span></h3>
+                <div class="faq-content">
+                  <p>No, our platform offers user-friendly tools and a strategy builder that requires no coding skills, making it accessible for all users.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">2.</span> <span>Can I test my trading strategies before using them?</span></h3>
+                <div class="faq-content">
+                  <p>Yes, our backtesting suite allows you to evaluate your strategies using historical market data to assess their performance before trading live.
+
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">3.</span> <span> How does social trading work?</span></h3>
+                <div class="faq-content">
+                  <p>Social trading allows you to follow and replicate the trades of successful investors, enabling you to benefit from their expertise without needing extensive knowledge yourself.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">4.</span> <span>What kind of risk management tools do you provide?</span></h3>
+                <div class="faq-content">
+                  <p>We offer a range of risk management features, including customizable risk parameters and position sizing tools to help you protect your investments.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">5.</span> <span>Is there customer support available?</span></h3>
+                <div class="faq-content">
+                  <p>Yes, our dedicated support team is available to assist you with any questions or issues you may have while using our platform.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+            <h3>Testimonials</h3>
+            <p>Welcome to QuantEdge's Testimonials !</p>
+            <p>Dive into the stories of clients who've experienced success with us. Real voices, real impact. See how Algorooms make your trading easy and simple</p>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src=" {% static 'assets/img/testimonials/testimonials-1.jpg' %} " class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Saul Goodman</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>I never thought trading could be this easy! The automated trade execution feature has transformed my approach, allowing me to make precise trades without being glued to my screen all day. Highly recommend!</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src=" {% static 'assets/img/testimonials/testimonials-2.jpg' %} " class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Sara Wilsson</h3>
+                        <h4>Designer</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>As a novice trader, I was intimidated by the complexities of creating strategies. The Strategy Builder made it incredibly simple to craft custom strategies without any coding. I feel empowered and confident in my trading decisions!</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src=" {% static 'assets/img/testimonials/testimonials-3.jpg' %} " class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Jena Karlis</h3>
+                        <h4>Store Owner</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Backtesting my strategies with real market data has been a game-changer. I've refined my approach and learned from past market behaviors, which has significantly improved my trading results.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src=" {% static 'assets/img/testimonials/testimonials-4.jpg' %} " class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Matt Brandon</h3>
+                        <h4>Freelancer</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>The risk management tools are top-notch! They help me safeguard my investments while I focus on executing my trading strategies. I feel much more secure knowing I have these tools at my disposal.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src=" {% static 'assets/img/testimonials/testimonials-5.jpg' %} " class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>John Larson</h3>
+                        <h4>Entrepreneur</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>The social trading platform is fantastic! I can follow and learn from expert traders while sharing insights with peers. It’s great to be part of a community that supports and inspires each other!</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="recent-posts section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recent Posts</h2>
+        <p>Trending Trading Articles</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src=" {% static 'assets/img/blog/blog-1 - Copy.jpg' %} " alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Trading</p>
+
+              <h2 class="title">
+                <a href="https://www.investing.com/academy/trading/ai-stock-trading-guide/">AI Stock Trading: How Artificial Intelligence Can Revolutionize Your Stock Picking</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src=" {% static 'assets/img/blog/blog-author.jpg' %} " alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Sara-Jayne Slack</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">November 5, 2024</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article>
+
+              <div class="post-img">
+                <img src=" {% static 'assets/img/blog/Key-Metrics.png' %} " alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Stocks</p>
+
+              <h2 class="title">
+                <a href="https://www.investing.com/academy/stocks/key-metrics-for-growth-stocks/">Key Metrics and Indicators for Growth Stocks</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src=" {% static 'assets/img/blog/blog-author-2.jpg' %} " alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author"> Sarina Isaacs</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">October 28, 2024</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <article>
+
+              <div class="post-img">
+                <img src=" {% static 'assets/img/blog/bitcoin.jpg' %} " alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Crytpo</p>
+
+              <h2 class="title">
+                <a href="https://www.investing.com/academy/crypto/what-is-crypto/">What is Crypto? A Beginner's Guide to Cryptocurrency</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src=" {% static 'assets/img/blog/blog-author-3.jpg' %} " alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Jimmy Aki</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01"> August 21, 2024</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+        </div><!-- End recent posts list -->
+
+      </div>
+
+    </section><!-- /Recent Posts Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to contact us anytime</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>A108 SV Road</p>
+                  <p>Mumbai, Maharashtra 400059</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 98765 43210</p>
+                  <p>+91 99876 54321
+                  </p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>supports@quantedge.com</p>
+                  <p>contact@quantedge.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday</p>
+                  <p>9:00AM - 05:00PM</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">QuantEdge</span>
+          </a>
+          <p>Unlock your investment potential with our innovative tools.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Automated Trade Execution</a></li>
+            <li><a href="#">Strategy Builder</a></li>
+            <li><a href="#">Backtesting Suite</a></li>
+            <li><a href="#">Risk Management Tools</a></li>
+            <li><a href="#">Social Trading Platform</a></li>
+            <li><a href="#"> Real-Time Market Insights </a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>A108 SV Road</p>
+          <p>Mumbai, Maharashtra 400059</p>
+          <p>India</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 98765 43210</span></p>
+          <p><strong>Email:</strong> <span>info@quantedge.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="sitename">QuantEdge</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] {% static ' -->' %} 
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src=" {% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+  <script src=" {% static 'assets/vendor/php-email-form/validate.js' %} "></script>
+  <script src=" {% static 'assets/vendor/aos/aos.js' %} "></script>
+  <script src=" {% static 'assets/vendor/glightbox/js/glightbox.min.js' %} "></script>
+  <script src=" {% static 'assets/vendor/purecounter/purecounter_vanilla.js' %} "></script>
+  <script src=" {% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %} "></script>
+  <script src=" {% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %} "></script>
+  <script src=" {% static 'assets/vendor/swiper/swiper-bundle.min.js' %} "></script>
+
+  <!-- Main JS File -->
+  <script src=" {% static 'assets/js/main.js' %} "></script>
+
+</body>
+
+</html>
